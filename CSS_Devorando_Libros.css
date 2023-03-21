@@ -17,12 +17,14 @@ body{
     width: 90%;
     border-radius: 15px;
     height: 40vh;
+    box-shadow:  0px 0px 45px rgb(211, 201, 201);
+    
 }
  .h2header{
     margin: auto;
     text-align: center;
     color: white;
-    text-shadow:rgb(243, 26, 59);
+    
  }
 
 .navegacion{
@@ -62,9 +64,9 @@ body{
 }
 .navegacion li:hover{
 	
-    transition-duration: 1.2s;
+    transition-duration: 1s;
     border-style: groove;
-    background-color: lightsalmon;
+    background-color: rgba(236, 195, 202, 0.6);
 
    
 }
@@ -81,7 +83,17 @@ body{
     
 }
 
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+}
 
+.navegacion li:hover .menu-vertical{
+    display: block;
+    padding-top: 5px;
+    
+}
 
 
 /* CUERPO */
