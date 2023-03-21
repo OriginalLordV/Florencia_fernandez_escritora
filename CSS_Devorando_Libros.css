@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+/*Class encabezado: con los elementos del header*/
+
+body{
+    background: linear-gradient(rgb(240, 163, 176), rgb(221, 138, 152), rgb(243, 26, 59))
+}
+.logo{
+    
+    margin: auto;
+    margin-top:5vh;
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    border-style: solid;
+    border-color: white;
+    width: 90%;
+    border-radius: 15px;
+    height: 40vh;
+}
+ .h2header{
+    margin: auto;
+    text-align: center;
+    color: white;
+    text-shadow:rgb(243, 26, 59);
+ }
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    min-height: 7vh;
+
+}
+
+.link{
+    display: flex;
+    align-items: center;
+}
+.link {
+    text-decoration: none;
+    font-size: 0.8em;
+
+}
+
+.navegacion li{
+
+	display: inline-block;
+	padding-left: 5vh;
+    padding-right: 5vh;
+    margin-right: 7px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-end-start-radius: 15px;
+    /* background-image:;imagen*/
+    
+    
+    
+}
+.navegacion li:hover{
+	
+    transition-duration: 1.2s;
+    border-style: groove;
+    background-color: lightsalmon;
+
+   
+}
+
+.navegacion nav a{
+
+	font-size:1.5em;
+    font-weight: 100;
+	color: white;
+	text-decoration: none;
+}
+.encabezado .navegacion a:hover{
+	color: white;
+    
+}
+
+
+
+
+/* CUERPO */
+
+body{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+
+.cuerpo {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: auto;
+    flex-wrap:wrap;
+    max-width: 75%;
+    margin: auto;
+    justify-content: center;
+    align-items: baseline;
+}
+p{
+    font-family: 'Crimson Text', serif;
+    font-size: 1.5em;
+    color: white;
+}
