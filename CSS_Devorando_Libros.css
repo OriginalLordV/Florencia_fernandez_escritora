@@ -1,49 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-/*Class encabezado: con los elementos del header*/
+/*webkits y general*/
 
+
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background: linear-gradient(rgb(240, 163, 176), rgb(221, 138, 152), rgb(243, 26, 59))
 }
-.logo{
-    
-    margin: auto;
-    margin-top:5vh;
-    flex-direction: row;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    border-style: solid;
-    border-color: white;
-    width: 90%;
-    border-radius: 15px;
-    height: 40vh;
-    box-shadow:  0px 0px 45px rgb(211, 201, 201);
-    
-}
- .h2header{
-    margin: auto;
-    text-align: center;
-    color: white;
-    
- }
 
-.navegacion{
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(248, 105, 236), rgb(146, 69, 142));
+    border-radius: 7px;
+}
+
+/*Class encabezado: con los elementos del header*/
+.encabezado .navegacion{
+    z-index: 3;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    top:0;
+    background: radial-gradient(rgb(226, 159, 159),rgb(173, 104, 116), rgb(151, 92, 85));
     align-items: center;
-    min-height: 7vh;
-
+    height: 105px;
+    width: 100%;
+    padding-left: 15px;
+}
+.navegacion ul{
+    padding-right:15px;
 }
 
 .link{
     display: flex;
     align-items: center;
-}
-.link {
+    color: white;
     text-decoration: none;
-    font-size: 0.8em;
+    
+}
+.link h2{
+    padding-left: 15px;
+    font-size: 2.5em;
+    font-family: monospace;
+    padding-right: 15px;
+    border-right: solid 3px;
+    
+}
 
+.link:hover{
+    scale: 1.1;
+    transition-duration: 1.5s;
+    color: white;
 }
 
 .navegacion li{
@@ -66,9 +78,7 @@ body{
 	
     transition-duration: 1s;
     border-style: groove;
-    background-color: rgba(236, 195, 202, 0.6);
-
-   
+    background-color: rgba(236, 195, 202, 0.6);   
 }
 
 .navegacion nav a{
@@ -90,11 +100,11 @@ body{
 }
 
 .navegacion li:hover .menu-vertical{
+    
     display: block;
     padding-top: 5px;
     
 }
-
 
 /* CUERPO */
 
@@ -104,6 +114,33 @@ body{
     box-sizing: border-box;
     
 }
+.logo{
+    
+    margin: 115px auto auto auto;
+    padding-top: 7vh;
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    border-style:dashed ;
+    border-color: white;
+    width: 90%;
+    border-radius: 15px;
+    height: 40vh;
+    z-index: 2;  
+}
+
+.h2header{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    
+ }
+
+
+
+
+
 
 .cuerpo {
     display: flex;
@@ -116,6 +153,39 @@ body{
     justify-content: center;
     align-items: baseline;
 }
+
+.tipeo{
+    display: flex;
+    font-family: monospace;
+    margin: 30px auto auto auto;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 14ch;
+}
+
+.tipeo {
+       
+    animation: animacion 2s steps(12), transparent .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    color: black;
+    border-right: 3px solid;
+    }
+    
+@keyframes animacion {
+    from {
+        width: 0px
+    }
+    }
+        
+@keyframes transparent {
+    50% {
+        border-color: transparent
+    }
+    }
+    
+      
+
 p{
     font-family: 'Crimson Text', serif;
     font-size: 1.5em;
