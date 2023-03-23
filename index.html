@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="Width= device-width, initial=scale01.0">
-	<script src=""></script>
+	<script defer src="/app.js"></script>
 
  	<title>Florencia A. Fernandez	</title>
  </head>
@@ -20,18 +20,18 @@
 			<a class="link" href="https://florenciafernandez.netlify.app" target="_blank"><img src="/Sources/icons8-ligero-60.png" alt="img_deli">
 				<h2 class="iconodl">Inicio</h2>
 			</a>
-			<button class="toggle"><img src="/Sources/icons8-menú-xbox-64.png"></img></button>
-			<nav >
+			<button class="toggle" aria-label="Abrir menú"><img src="/Sources/icons8-menú-xbox-64.png"></img></button>
+			<nav class="nav-bar">
 				
-				<ul>
-					<li><a href="a">   Libros</a>
-						<ul class="menu-vertical"><li><a href="">Proyectos</a></li>
-							<li><a href="">Publicados</a></li></ul>
-					<li><a href="a">   Tienda</a>
-						<ul class="menu-vertical"><li><a href="">Preventa</a></li>
-							<li><a href="">Lanzamientos</a></li></ul></li>
-					<li><a href="a">   Redes</li>
-					<li><a href="a">   Artículos</a></li>
+				<ul class="nav-links">
+					<li class="menu_item menu-show">   Libros <img  src="/Sources/icons8-pluma-pluma-30.png" alt="">
+						<ul class="menu-vertical"><li><a class="links-vertical" href="">Proyectos</a></li>
+							<li><a class="links-vertical" href="">Publicados</a></li></ul>
+					<li class="menu_item menu-show">  Tienda <img  src="/Sources/icons8-pluma-pluma-30.png" alt="">
+						<ul class="menu-vertical"><li><a class="links-vertical" href="">Preventa</a></li>
+							<li><a class="links-vertical" href="">Lanzamientos</a></li></ul>
+						<li class="menu_item"><a href="a">   Redes <img  src="/Sources/icons8-pluma-pluma-30.png" alt=""></li>
+						<li class="menu_item"><a href="a">   Artículos <img  src="/Sources/icons8-pluma-pluma-30.png" alt=""></a></li>
 				</ul>
 			</nav>
 		</div>
