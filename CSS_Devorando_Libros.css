@@ -95,13 +95,9 @@ body{
     border-style: solid;
     border-color: rgb(236, 204, 134);
     border-width: 2px;
-    border-end-start-radius: 15px;
-   
-    /* background-image:;imagen*/
-    
-    
-    
+    border-end-start-radius: 15px;        
 }
+
 .navegacion li:hover{	
     transition-duration: 1s;
     background-color: rgb(228, 161, 202, .6);
@@ -122,6 +118,8 @@ body{
     position: absolute;
     display: none;
     list-style: none;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navegacion li:hover .menu-vertical{
@@ -138,16 +136,18 @@ body{
 /* CUERPO TITULO ANIMACION*/
 
 body{       /*SETEO BÁSICO*/
-    margin: 0px;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     
 }
 .logo{          /*DIV DE FIRMA*/
+    padding: 0%;
     margin: auto;
     padding-top: 7vh;
     display: flex;
     position: relative;
+    min-width: 900px;
 }
 .h2header{  /*CONTENEDOR DE FIRMA*/
     display: flex;
@@ -173,33 +173,38 @@ body{       /*SETEO BÁSICO*/
 
 
 .cuerpo {
+    padding: 0%;
     display: flex;
     position: relative;
     flex-direction: column;
     margin: auto;
     flex-wrap:wrap;
-    max-width: 75%;
-    margin: auto;
     justify-content: center;
     align-items: baseline;
 }
 
+.cuerpo p {
+    width: 75%;
+    margin: auto;
+    
+    font-family: 'Crimson Text', serif;
+    font-size: 1.5em;
+    color: rgb(39, 39, 39);
+}
+
 .tipeo{
-    display: flex;
-    font-family: monospace;
-    margin: 30px auto auto auto;
+    
+    margin: 30px auto 60px auto;
     white-space: nowrap;
     border-right: 4px solid;
     width: 14ch;
-}
-
-.tipeo {
-       
+         
     animation: animacion 2s steps(12), transparent .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     color: black;
     border-right: 3px solid;
+    font-family: monospace;
     }
     
 @keyframes animacion {
@@ -216,15 +221,13 @@ body{       /*SETEO BÁSICO*/
     
       
 
-p{
-    font-family: 'Crimson Text', serif;
-    font-size: 1.5em;
-    color: rgb(39, 39, 39);
-}
+
+
+
 
 /*DISEÑO RESPONSIVE*/
 
-@media (max-width: 800px){
+@media (max-width: 900px){
     .logo{
         margin: auto;
         padding-top: 15vh;
@@ -236,12 +239,15 @@ p{
         object-fit: cover;
     }
     
+    .cuerpo{
+        width: 900px;
+    }
     
     .toggle{
         margin-left: auto;
         display: block;
         padding-right: 7vh;
-        padding-bottom: 3vh;
+        
     }
 
     .nav-links{
@@ -264,20 +270,23 @@ p{
     }
    
     .nav-links li{
-        
+        display: block;
         margin-bottom: 15px;
         border-style: none;
-        border-bottom: 1px solid;
+
         
     }
-   .menu-vertical{
-    display: grid;
-    position: unset;
-    width: 100%;
-    height: 0;
-    transition: height .3;
-    overflow: hidden;
-    
-  }
+
+    .nav-links li:hover{
+        background: linear-gradient(transparent,  salmon);
+    }
+
+    .menu-vertical{
+        position: relative;
+        width: 90%;
+        transition: height .3;
+        
+        
+      }
     
 }
