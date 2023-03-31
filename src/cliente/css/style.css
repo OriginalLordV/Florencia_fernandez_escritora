@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+/*webkits y general*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+
+    min-width: screen;
+    
+}
+
+body{
+    background: linear-gradient(rgb(228, 161, 202), rgb(236, 204, 134))
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(248, 105, 236), rgb(146, 69, 142));
+    border-radius: 7px;
+}
+::-webkit-scrollbar-track{
+    background-color: darkgray;
+}
+
+/*Class encabezado: con los elementos del header*/
+.encabezado .navegacion{
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    flex-direction: row;
+    top:0;
+    left: 0;
+    align-items: center;
+    height: 17.5vh;
+    width: 100%;
+    padding-left: 15px;
+    
+}
+.navegacion ul{
+    padding-right:15px;
+    color: whitesmoke;
+    align-items: center;
+}
+
+
+.navegacion li:hover img{
+    rotate: 15deg;
+    transition: ease 1s;
+}
+
+
+.link{
+    
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    text-decoration: none;
+    border-style: solid transparent;
+    
+    
+}
+.link h2{
+    
+    padding-left: 15px;
+    font-size: 2.5em;
+    font-family: monospace;
+    padding-right: 3px;
+    border-right: solid 3px;
+    
+}
+
+.link h2:hover{
+    scale: 1.1;
+    transition-duration: 1.5s;
+    
+}
+
+/*MENÚ DESPLEGABLE EN MOBILES*/
+.toggle {
+    background-color: transparent;
+    border-style: none;
+    display: none;
+    cursor: pointer;
+}
+
+
+/*LINKS EN LA BARRA DE NAVEGACION*/
+.navegacion li{
+
+	display: inline-block;
+	padding-left: 5vh;
+    padding-right: 5vh;
+    margin-right: 7px;
+    
+    font-family: 'Times New Roman', Times, serif;
+    border-style: solid;
+    border-color: rgb(236, 204, 134);
+    border-width: 2px;
+    border-end-start-radius: 15px;        
+}
+
+.navegacion li:hover{	
+    transition-duration: 1s;
+    background-color: rgb(228, 161, 202, .6);
+}
+
+.navegacion nav a{
+    font-weight: 100;
+	color: whitesmoke; /*COLOR DE LOS LINKS EN LA BARRA DE NAVEGACION*/
+	text-decoration: none;
+}
+
+.encabezado .navegacion a:hover{
+	color: white;
+    
+}
+
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navegacion li:hover .menu-vertical{
+    
+    display: block;
+    padding-top: 5px;
+    
+}
+.nav-bar{
+    font-size: 1.5em;
+}
+
+
+/* CUERPO TITULO ANIMACION*/
+
+body{       /*SETEO BÁSICO*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.logo{          /*DIV DE FIRMA*/
+    padding: 0%;
+    margin: auto;
+    padding-top: 17vh;
+    display: flex;
+    position: relative;
+    min-width: 900px;
+}
+.h2header{  /*CONTENEDOR DE FIRMA*/
+    display: flex;
+    
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2header img{  /*FIRMA PROPIAMENTE DICHA*/
+    
+	width: 40%;
+	height: 110%;
+	object-fit: cover;
+
+}
+
+
+
+
+
+
+
+
+.cuerpo {
+    padding: 0%;
+    display: flex;
+    position: relative;
+
+    margin: auto;
+    flex-wrap:wrap;
+    justify-content: center;
+    
+}
+
+.cuerpo p {
+    width: 75%;
+    margin: auto;
+    
+    font-family: 'Crimson Text', serif;
+    font-size: 1.5em;
+    color: rgb(39, 39, 39);
+}
+
+.tipeo{
+    
+    margin: auto;
+
+    justify-content: center;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 14ch;
+         
+    animation: animacion 2s steps(12), transparent .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    color: black;
+    border-right: 3px solid;
+    font-family: monospace;
+    }
+    
+@keyframes animacion {
+    from {
+        width: 0px
+    }
+    }
+        
+@keyframes transparent {
+    50% {
+        border-color: transparent
+    }
+    }
+
+.contenedor{
+    justify-self: center;
+    justify-content: center;
+
+    margin: 19vh 0vh 0 0vh;
+
+    height: 70vh;
+    width: 150vh;
+
+    display: flex;
+    position: relative;
+    flex-direction:column;
+    
+    
+    border-style: solid black;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.titulo{
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-family:'Libre Baskerville', serif;
+    color: rgb(59, 89, 90);
+    text-align: center;
+    
+    display: flex;
+    
+    margin: 20px auto -19px auto;
+}
+
+.contredes {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;   
+    gap: 20px;
+    flex-direction: row;
+ ;
+}
+      
+
+
+
+
+
+/*DISEÑO RESPONSIVE*/
+
+@media (max-width: 800px){
+   
+    .link{
+        font-size: 1.2em;
+    }
+
+
+    .logo{
+        min-width: 400px;
+        margin: auto;
+        padding-top: 15vh;
+        padding-left: 2%;
+    }
+    .h2header img{  /*FIRMA PROPIAMENTE DICHA*/
+        padding-top: 7vh;
+        width: 60%;
+        height: 50%px;
+        object-fit: cover;
+    }
+    
+    body{
+        margin: auto;
+    }
+
+    .contenedor{
+        width: 90%;
+        height: fit-content;
+        padding-bottom: 10px;
+    }
+    .titulo{
+        font-size: 3em;
+        margin-bottom: 10px;
+        font-family:'Libre Baskerville', serif;
+        color: whitesmoke;
+    }
+    .contredes{
+        flex-direction: column;
+    }
+
+    .toggle{
+        scale: 1.3;
+        margin-left: auto;
+        display: block;
+        padding-right: 7vh;
+        
+    }
+
+    .nav-links{
+        position: fixed;
+        padding-top: 10vh;
+        /*max-width: 35%;*/
+        width: 80%;
+        top: 17.5vh;
+        left: 100%;
+        transition: right .3s;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        background: linear-gradient(rgb(228, 161, 202), rgb(236, 204, 134));
+        display: grid;
+        grid-auto-rows: max-content;
+    }
+    
+    .nav-menu_visible{
+        left: 0;
+    }
+    
+    .nav-links li{
+        font-size: 1.1em;
+        display: block;
+        margin-bottom: 15px;
+        border-style: none;
+
+        
+    }
+
+    .nav-links li:hover{
+        background: linear-gradient(transparent,  salmon);
+    }
+
+    .menu-vertical{
+        position: relative;
+        width: 90%;
+        transition: height .3;
+        
+      }
+    
+}
